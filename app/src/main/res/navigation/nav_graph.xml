@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recentMessagesFragment">
+
+    <fragment
+        android:id="@+id/recentMessagesFragment"
+        android:name="me.vojinpuric.chatapp.fragments.RecentMessagesFragment"
+        android:label="Recent Messages"
+        tools:layout="@layout/fragment_recent_messages">
+        <action
+            android:id="@+id/action_recentMessagesFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/mi_profile"
+        android:name="me.vojinpuric.chatapp.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/mi_new_message"
+        android:name="me.vojinpuric.chatapp.fragments.NewMessageFragment"
+        android:label="New Message"
+        app:startDestination="@id/action_newMessageFragment_to_chatFragment"
+        tools:layout="@layout/fragment_new_message">
+        <action
+            android:id="@+id/action_newMessageFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/recentMessagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="me.vojinpuric.chatapp.fragments.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/mi_new_contact"
+        android:name="me.vojinpuric.chatapp.fragments.NewContactFragment"
+        android:label="New Contact"
+        tools:layout="@layout/fragment_new_contact" />
+</navigation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/mi_new_message"
+        android:title="@string/new_message" />
+    <item
+        android:id="@id/mi_new_contact"
+        android:title="@string/new_contact" />
+    <item
+        android:id="@id/mi_profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/mi_sign_out"
+        android:title="@string/sign_out" />
+</menu>
